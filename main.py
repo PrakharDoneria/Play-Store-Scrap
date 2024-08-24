@@ -3,10 +3,6 @@ import play_scraper
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
-def redirect_to_dev():
-    return redirect("https://play.google.com/store/apps/dev?id=8237023983569180393")
-
 @app.route('/app', methods=['GET'])
 def app_details():
     app_id = request.args.get('id')
